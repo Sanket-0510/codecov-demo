@@ -12,3 +12,9 @@ jobs:
         uses: getsentry/action-enforce-license-compliance@57ba820387a1a9315a46115ee276b2968da51f3d # main
         with:
           fossa_api_key: ${{ secrets.FOSSA_API_KEY }}
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+         token: ${{ secrets.CODECOV_TOKEN }}
+         slug: Sanket-0510/codecov-demo
